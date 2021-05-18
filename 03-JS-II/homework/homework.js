@@ -92,7 +92,11 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  return numero === 10 || numero === 5 
+  if(numero === 10 || numero === 5) {
+    return true;
+  } else {
+    return false;
+  } 
 }
 
 function estaEnRango(numero) {
@@ -110,7 +114,11 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  return numero == Math.floor(numero)
+  if(Math.round(numero)==numero) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function fizzBuzz(numero) {
@@ -118,7 +126,7 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if(numero % 15 === 0) {
+  if(numero % 15 === 0) {  //el modulo 15 va antes que los demas para que el return no impida que se siga evaluando los demas codigos.
     return 'fizzbuzz'
   }
   if(numero % 3 === 0) {
@@ -187,12 +195,12 @@ function esVerdadero(valor){
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
-  let arrayTablaDel6 = []
-  for (let i = 0; i < 11; i++) {
-        arrayTablaDel6.push(6 * i)
+  //Escribe tu código aquí
+  var acum = [];
+  for(var i=0; i<=10; i++) {
+    acum.push(i*6);
   }
-  return arrayTablaDel6
+  return acum;
 }
 
 function tieneTresDigitos(numero){
