@@ -2,7 +2,7 @@
 
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un array
-  // Tu código:
+  // Tu código: //
   return array [0]
 }
 
@@ -26,11 +26,10 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  var nuevoArray = []
-  for(var i = 0; i < array.length; i++) {
-    nuevoArray[i] = array[i] + 1
-  }
-  return nuevoArray
+  var acum = [];
+  for(var i=0; i<array.length; i++) {
+    acum.push(array[i]+1);
+  }; return acum;
 }
 
 
@@ -59,7 +58,11 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  return palabras.join(' ')
+      // palabras.join(' ')
+  var novo = palabras[0]
+  for(var i=1; i<palabras.length; i++) {
+    novo=novo+' '+palabras[i];
+  } return novo;
 }
 
 
@@ -152,6 +155,10 @@ function empiezaConNueve(n) {
   if(arrayNueve.charAt(0) === '9') {
     return true
   } return false
+  /*var cum=n.toString();
+  if(cum.slice(0,-(cum.length-1))==='9') {
+    return true;
+  }; return false;*/
 }
 
 
