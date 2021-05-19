@@ -35,12 +35,20 @@ function agregarStringInvertida() {
   // Ej: 'menem'.reverse() => menem
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
+  /*String.prototype.reverse = function(str) {
+    var acumulador = '';
+    for(var i=str.length; i>=0; i--) {
+      acumulador = acumulador + str.charAt(i);
+    } return acumulador;  //Al parecer esta funcion solo funciona con numeros. La probé en node.
+  };                      // SOLUCIONADO :)
+  */
   String.prototype.reverse = function() {
-    var acum = '';
-    for(var i=this.length-1; i>=0; i--) {
-      acum = acum + this.charAt(i);
-    } return acum;  //Al parecer esta funcion solo funciona con numeros. La probé en node
-  }; 
+    var stringInvertida = '';
+    for(var i = this.length - 1; i>=0; i--) {
+      stringInvertida = stringInvertida + this.charAt(i);
+    }
+    return stringInvertida;
+  };
 }
 
 // ---------------------------------------------------------------------------//
