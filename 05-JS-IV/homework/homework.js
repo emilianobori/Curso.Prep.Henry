@@ -94,7 +94,7 @@ function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
   // Devuelve el objeto
   // Tu código:
-  return usuario['password'] === password;
+  return usuario['nuevaPassword'] === nuevaPassword;
 }
 
 function agregarAmigo(usuario, nuevoAmigo) {
@@ -124,6 +124,7 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+
   /*var acumuladorUsu = [0];
   for(var i=0; i<usuario.length; i++) {
     acumuladorUsu = acumuladorUsu + usuario[i];
@@ -142,6 +143,19 @@ function sumarLikesDeUsuario(usuario) {
   }
   return acumuladorUsu * acumPosts * acumPpos * acumLike
   */
+  //-----------------------------------------------------//
+
+  /*function sumarLikesDeUsuario(usuario) {
+  // usuario = {
+  //  posts = [post{likes: 15}, post{likes: 1}, post{likes: 13}, post{likes: 75},]
+  //  posts = [post{likes: 1}, post{likes: 178}, post{likes: 123}, post{likes: 5},]
+  //  posts = [post{likes: 22}, post{likes: 10}, post{likes: 7}, post{likes: 87},]
+  //}
+  var acumulador = 0;
+  for(var i=0; i<usuario.posts.length; i++) {
+    acumulador = acumulador + usuario.posts[i].likes
+  }; return acumulador;
+}*/
   var acumLikes = 0;
   for(var i=0; i<usuario.posts.length; i++) {
     acumLikes = acumLikes + usuario.posts[i].likes;
