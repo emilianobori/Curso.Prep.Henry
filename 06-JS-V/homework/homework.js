@@ -35,6 +35,7 @@ function agregarStringInvertida() {
   // Ej: 'menem'.reverse() => menem
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
+  // Tu codigo:
   /*String.prototype.reverse = function(str) {
     var acumulador = '';
     for(var i=str.length; i>=0; i--) {
